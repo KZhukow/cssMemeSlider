@@ -23,18 +23,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    gap: 2vmin;
+    margin: auto;
 }
 
 .container .slides {
     display: flex;
-    width: 75vw;
-    height: 55vw;
+    width: 75vmin;
+    height: 55vmin;
     overflow: hidden;
-    border-radius: 4vw;
-    box-shadow: 0 0 3.5vw 0.5vw black;
+    border-radius: 4vmin;
+    box-shadow: 0 0 3.5vmin 0.5vmin black;
 }
 
 .container .slides .slide {
@@ -57,7 +56,7 @@ body {
     justify-content: space-between;
     width: 100%;
     margin: 0 auto 0;
-    gap: 2vw;
+    gap: 2vmin;
 }
 
 .container .btn-and-description .description {
@@ -76,12 +75,12 @@ body {
 }
 
 .container .btn-and-description .btns .btn {
-    height: 6vw;
-    width: 6vw;
+    height: 6vmin;
+    width: 6vmin;
     border-radius: 50%;
     background: rgb(0, 0, 0);
-    margin: 0.8vw;
-    padding: 1.3vw;
+    margin: 0.8vmin;
+    padding: 1.3vmin;
     background-clip: content-box;
     transition: 0.3s;
 }
@@ -99,7 +98,7 @@ body {
     cursor: pointer;
     background: rgb(198, 255, 252);
     background-clip: content-box;
-    box-shadow: 0 0 0.8vw 0.8vw rgb(198, 255, 252);
+    box-shadow: 0 0 0.8vmin 0.8vmin rgb(198, 255, 252);
 }
 
 #slide1:checked ~ .container #btn1,
@@ -109,7 +108,7 @@ body {
 #slide5:checked ~ .container #btn5 {
     background: rgb(255, 255, 255);
     background-clip: content-box;
-    box-shadow: 0 0 0.48vw 0.32vw white;
+    box-shadow: 0 0 0.48vmin 0.32vmin white;
 }
 
 #slide1:checked ~ .container #slide1,
@@ -126,7 +125,7 @@ body {
 #slide4:checked ~ .container #text4,
 #slide5:checked ~ .container #text5 {
     opacity: 1;
-    font-size: 6vw;
+    font-size: 6vmin;
 }
 
 #btn1:active, #btn2:active, #btn3:active, #btn4:active, #btn5:active {
