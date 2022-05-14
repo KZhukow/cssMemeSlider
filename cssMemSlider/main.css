@@ -141,9 +141,9 @@ body {
 #slide3:checked ~ .container #btn3:active,
 #slide4:checked ~ .container #btn4:active,
 #slide5:checked ~ .container #btn5:active {
-    background: rgb(255, 255, 255);
+    background: rgb(255, 187, 187);
     background-clip: content-box;
-    box-shadow: 0 0 0.48vmin 0.32vmin white;
+    box-shadow: 0 0 0.48vmin 0.32vmin rgb(255, 187, 187);
 }
 
 @media (max-width: 767px) {
