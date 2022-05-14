@@ -29,9 +29,10 @@ body {
 
 .container .slides {
     display: flex;
-    width: 75vmin;
+    width: 95vmin;
     height: 55vmin;
     overflow: hidden;
+    background: #25282a;
     border-radius: 4vmin;
     box-shadow: 0 0 3.5vmin 0.5vmin black;
 }
@@ -42,7 +43,7 @@ body {
     background-repeat: round;
     background-size: cover;
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity cubic-bezier(0.4, 0, 1, 1) .5s, width ease-out .5s;
 }
 
 .slide1 { background: url(./asset/img/Sand_cat.jpg);}
@@ -62,12 +63,13 @@ body {
 .container .btn-and-description .description {
     color: #f3f3f4;
     display: flex;
+    flex-direction: column;
 }
 
 .container .btn-and-description .description .text {
-    font-size: 0;
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity ease-in-out .5s, font-size cubic-bezier(0.4, 0, 1, 1) .5s;
+    height: 0;
 }
 
 .container .btn-and-description .btns {
@@ -140,9 +142,5 @@ body {
     .container .btn-and-description .btns {
         order: -1;
         align-self: center;
-    }
-
-    .container .btn-and-description .description {
-        flex-direction: column;
     }
 }
