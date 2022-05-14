@@ -70,6 +70,7 @@ body {
     opacity: 0;
     transition: opacity ease-in-out .5s, font-size cubic-bezier(0.4, 0, 1, 1) .5s;
     height: 0;
+    font-size: 3vmin;
 }
 
 .container .btn-and-description .btns {
