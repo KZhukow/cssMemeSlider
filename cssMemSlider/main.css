@@ -82,8 +82,8 @@ body {
     width: 6vmin;
     border-radius: 50%;
     background: rgb(0, 0, 0);
-    margin: 0.8vmin;
-    padding: 1.3vmin;
+    margin: 0.7vmin;
+    padding: 1.4vmin;
     background-clip: content-box;
     transition: 0.3s;
 }
@@ -134,6 +134,16 @@ body {
 #btn1:active, #btn2:active, #btn3:active, #btn4:active, #btn5:active {
     background: rgb(84, 244, 255);
     background-clip: content-box;
+}
+
+#slide1:checked ~ .container #btn1:active,
+#slide2:checked ~ .container #btn2:active,
+#slide3:checked ~ .container #btn3:active,
+#slide4:checked ~ .container #btn4:active,
+#slide5:checked ~ .container #btn5:active {
+    background: rgb(255, 255, 255);
+    background-clip: content-box;
+    box-shadow: 0 0 0.48vmin 0.32vmin white;
 }
 
 @media (max-width: 767px) {
