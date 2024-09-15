@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background: #25282a url(./asset/background/2798822111.svg);
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.radiobtn {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmin;
+    margin: auto;
+}
+
+.container .slides {
+    display: flex;
+    width: 95vmin;
+    height: 55vmin;
+    overflow: hidden;
+    background: #25282a;
+    border-radius: 4vmin;
+    box-shadow: 0 0 3.5vmin 0.5vmin black;
+}
+
+.container .slides .slide {
+    height: 100%;
+    width: 0;
+    background-repeat: round;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity cubic-bezier(0.4, 0, 1, 1) .5s, width ease-out .5s;
+}
+
+.slide1 { background: url(./asset/img/Sand_cat.jpg);}
+.slide2 { background: url(./asset/img/British_cat.jpg);}
+.slide3 { background: url(./asset/img/Maine_Coon.jpg);}
+.slide4 { background: url(./asset/img/Serval.jpg);}
+.slide5 { background: url(./asset/img/Lynx.jpg);}
+
+.container .btn-and-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto 0;
+    gap: 2vmin;
+}
+
+.container .btn-and-description .description {
+    color: #f3f3f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .btn-and-description .description .text {
+    opacity: 0;
+    transition: opacity ease-in-out .5s, font-size cubic-bezier(0.4, 0, 1, 1) .5s;
+    height: 0;
+    font-size: 3vmin;
+}
+
+.container .btn-and-description .btns {
+    display: flex;
+}
+
+.container .btn-and-description .btns .btn {
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    margin: 0.7vmin;
+    padding: 1.4vmin;
+    background-clip: content-box;
+    transition: 0.3s;
+}
+
+.container .btn-and-description .btns .btn:hover {
+    cursor: pointer;
+    background: rgb(124, 124, 124);
+    background-clip: content-box;
+}
+#slide1:checked ~ .container #btn1:hover,
+#slide2:checked ~ .container #btn2:hover,
+#slide3:checked ~ .container #btn3:hover,
+#slide4:checked ~ .container #btn4:hover,
+#slide5:checked ~ .container #btn5:hover {
+    cursor: pointer;
+    background: rgb(198, 255, 252);
+    background-clip: content-box;
+    box-shadow: 0 0 0.8vmin 0.8vmin rgb(198, 255, 252);
+}
+
+#slide1:checked ~ .container #btn1,
+#slide2:checked ~ .container #btn2,
+#slide3:checked ~ .container #btn3,
+#slide4:checked ~ .container #btn4,
+#slide5:checked ~ .container #btn5 {
+    background: rgb(255, 255, 255);
+    background-clip: content-box;
+    box-shadow: 0 0 0.48vmin 0.32vmin white;
+}
+
+#slide1:checked ~ .container #slide1,
+#slide2:checked ~ .container #slide2,
+#slide3:checked ~ .container #slide3,
+#slide4:checked ~ .container #slide4,
+#slide5:checked ~ .container #slide5 {
+    opacity: 1;
+    width: 100%;
+}
+#slide1:checked ~ .container #text1,
+#slide2:checked ~ .container #text2,
+#slide3:checked ~ .container #text3,
+#slide4:checked ~ .container #text4,
+#slide5:checked ~ .container #text5 {
+    opacity: 1;
+    font-size: 6vmin;
+}
+
+#btn1:active, #btn2:active, #btn3:active, #btn4:active, #btn5:active {
+    background: rgb(84, 244, 255);
+    background-clip: content-box;
+}
+
+#slide1:checked ~ .container #btn1:active,
+#slide2:checked ~ .container #btn2:active,
+#slide3:checked ~ .container #btn3:active,
+#slide4:checked ~ .container #btn4:active,
+#slide5:checked ~ .container #btn5:active {
+    background: rgb(255, 187, 187);
+    background-clip: content-box;
+    box-shadow: 0 0 0.48vmin 0.32vmin rgb(255, 187, 187);
+}
+
+@media (max-width: 767px) {
+    .container .btn-and-description {
+        flex-direction: column;
+    }
+    .container .btn-and-description .btns {
+        order: -1;
+        align-self: center;
+    }
+}
